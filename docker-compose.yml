@@ -1,0 +1,10 @@
+services:
+  myapp:
+    build: .
+    container_name: flask-server
+    command: flask --app src/app run -h 0.0.0.0 -p 8000 --debug
+    ports:
+      - 127.0.0.1:80:8000
+    volumes:
+      - .:/code
+  
